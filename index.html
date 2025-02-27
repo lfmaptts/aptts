@@ -78,6 +78,22 @@
       <p>Zero-shot &amp; Multi-speaker TTS Samples</p>
     </div>
   </header>
+
+  <nav style="background-color: #444; padding: 10px 0;">
+    <div class="container">
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex; justify-content: center;">
+        <li style="margin: 0 15px;">
+          <a href="#zero-shot" style="color: #fff; text-decoration: none;">Zero-shot TTS (LibriSpeech test-clean)</a>
+        </li>
+        <li style="margin: 0 15px;">
+          <a href="#zero-shot-comparison" style="color: #fff; text-decoration: none;">Zero-shot TTS (Comparison with other models)</a>
+        </li>
+        <li style="margin: 0 15px;">
+          <a href="#multi-speaker" style="color: #fff; text-decoration: none;">Multi-speaker TTS (VCTK)</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   
   <div class="container">
     <!-- Zero-shot TTS Section -->
@@ -426,9 +442,236 @@
     </div>
   </div>
 </div>
+</section>
+<section id="zero-shot-comparison">
+  <h2>Zero-shot TTS (Comparison with other models)</h2>
+</br>
+  <table style="width:100%; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th style="width: 25%;">Text</th>
+        <th style="width: 15%;">Prompt</th>
+        <th style="width: 15%;">E3-TTS</th>
+        <th style="width: 15%;">DiTTo-TTS</th>
+        <th style="width: 15%;">APTTS (4 steps)</th>
+        <th style="width: 15%;">w/o AP (32 steps)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Sample 1 -->
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">
+          She felt the force of the objections.
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/prompt/02_prompt.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/e3tts/02.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/ditto/02.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/aptts/02.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/ap32/02.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      
+      <!-- Sample 2 -->
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">
+          She can't get it out of her head, even after fifty years.
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/prompt/03_prompt.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/e3tts/03.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/ditto/03.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/aptts/03.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/ap32/03.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      
+      <!-- Sample 3 -->
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">
+          "I don't think so," replied Tom.
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/prompt/13_prompt.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/e3tts/13.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/ditto/13.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/aptts/13.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/ap32/13.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      
+      <!-- Sample 4 -->
+      <tr>
+        <td style="padding: 8px;">
+          But at that moment the voice of the stranger was heard from the window.
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/prompt/17_prompt.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/e3tts/17.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/ditto/17.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/aptts/17.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/ap32/17.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <h3>Celebrities: Optimus Prime & Rachel McAdams</h3>
+  <br>
+  <table style="width:100%; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th style="width: 25%;">Text</th>
+        <th style="width: 15%;">Prompt</th>
+        <th style="width: 15%;">CLaM-TTS</th>
+        <th style="width: 15%;">DiTTo-TTS</th>
+        <th style="width: 15%;">APTTS (4 steps)</th>
+        <th style="width: 15%;">w/o AP (32 steps)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Sample 1 -->
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">
+          We must unite and harness our strengths, for the fate of our world hangs in the balance.
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/prompt/optimusprime_prompt.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/clam/optimusprime.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/ditto/optimusprime.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/aptts/optimusprime.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/ap32/optimusprime.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      
+      <!-- Sample 2 -->
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">
+          But to those who knew her well, it was a symbol of her unwavering determination and spirit.
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/prompt/rachel_prompt.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/clam/rachel.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/ditto/rachel.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/aptts/rachel.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls>
+            <source src="wavs/comparison/ap32/rachel.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
 
-    </section>
+</section>
+
+
     
     <!-- Multi-speaker TTS Section -->
     <section id="multi-speaker">
