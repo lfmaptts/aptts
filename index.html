@@ -446,6 +446,7 @@
 <section id="zero-shot-comparison">
   <h2>Zero-shot TTS (Comparison with other models)</h2>
 </br>
+<div class="sample";>
   <table style="width:100%; border-collapse: collapse;">
     <thead>
       <tr>
@@ -587,91 +588,488 @@
       </tr>
     </tbody>
   </table>
-  <br>
-  <h3>Celebrities: Optimus Prime & Rachel McAdams</h3>
-  <br>
+</br>
+<h3>Celebrities: Optimus Prime & Rachel McAdams</h3>
+<br>
+<table style="width:100%; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th style="width: 25%;">Text</th>
+      <th style="width: 15%;">Prompt</th>
+      <th style="width: 15%;">CLaM-TTS</th>
+      <th style="width: 15%;">DiTTo-TTS</th>
+      <th style="width: 15%;">APTTS (4 steps)</th>
+      <th style="width: 15%;">w/o AP (32 steps)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Sample 1 -->
+    <tr style="border-bottom: 1px solid #ddd;">
+      <td style="padding: 8px;">
+        We must unite and harness our strengths, for the fate of our world hangs in the balance.
+      </td>
+      <td style="padding: 8px;">
+        <audio controls>
+          <source src="wavs/comparison/prompt/optimusprime_prompt.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px;">
+        <audio controls>
+          <source src="wavs/comparison/clam/optimusprime.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px;">
+        <audio controls>
+          <source src="wavs/comparison/ditto/optimusprime.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px;">
+        <audio controls>
+          <source src="wavs/comparison/aptts/optimusprime.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px;">
+        <audio controls>
+          <source src="wavs/comparison/ap32/optimusprime.wav" type="audio/wav">
+        </audio>
+      </td>
+    </tr>
+    
+    <!-- Sample 2 -->
+    <tr>
+      <td style="padding: 8px;">
+        But to those who knew her well, it was a symbol of her unwavering determination and spirit.
+      </td>
+      <td style="padding: 8px;">
+        <audio controls>
+          <source src="wavs/comparison/prompt/rachel_prompt.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px;">
+        <audio controls>
+          <source src="wavs/comparison/clam/rachel.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px;">
+        <audio controls>
+          <source src="wavs/comparison/ditto/rachel.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px;">
+        <audio controls>
+          <source src="wavs/comparison/aptts/rachel.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px;">
+        <audio controls>
+          <source src="wavs/comparison/ap32/rachel.wav" type="audio/wav">
+        </audio>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</br>
+
+<h4>Below is an extended version of the above model. It maintains the same architecture while incorporating additional public Korean datasets (2522 hours, 3424 speakers) into its training. Scroll ↔ to see entire samples.</h4>
+<div class="sample";>
+<div style="overflow-x: scroll;">
+<table style="width:100%; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th>Prompt</th>
+      <th>GT</th>
+      <th>CLaM-TTS</th>
+      <th>DiTTo-TTS</th>
+      <th>APTTS (4 steps)</th>
+      <th>w/o AP (32 steps)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid #ddd;">
+      <td style="padding: 8px; min-width: 250px;">
+        <font color="gray">angelica broke in in her energetic </font>way if you're going to be a duke i won't be left plain miss hamilton wells you couldn't be plain miss anything
+      </td>
+      <td style="padding: 8px; min-width: 150px;">
+        <audio controls>
+          <source src="wavs/comparison-extend/continuation/prompt-11.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px; min-width: 150px;">
+        <audio controls>
+          <source src="wavs/comparison-extend/continuation/gt-11.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px; min-width: 150px;">
+        <audio controls>
+          <source src="wavs/comparison-extend/continuation/clam-11.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px; min-width: 150px;">
+        <audio controls>
+          <source src="wavs/comparison-extend/continuation/ditto-11.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px; min-width: 150px;">
+        <audio controls>
+          <source src="wavs/comparison-extend/continuation/aptts-11.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px; min-width: 150px;">
+        <audio controls>
+          <source src="wavs/comparison-extend/continuation/ap32-11.wav" type="audio/wav">
+        </audio>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; min-width: 250px;">
+        <font color="gray">실현할 기회를 얻지 못하다 미국</font>의 전기회사를 방문해 계획을 말했습니다.
+      </td>
+      <td style="padding: 8px; min-width: 150px;">
+        <audio controls>
+          <source src="wavs/comparison-extend/continuation/prompt-13.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px; min-width: 150px;">
+        <audio controls>
+          <source src="wavs/comparison-extend/continuation/gt-13.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px; min-width: 150px;">
+        <audio controls>
+          <source src="wavs/comparison-extend/continuation/clam-13.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px; min-width: 150px;">
+        <audio controls>
+          <source src="wavs/comparison-extend/continuation/ditto-13.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px; min-width: 150px;">
+        <audio controls>
+          <source src="wavs/comparison-extend/continuation/aptts-13.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td style="padding: 8px; min-width: 150px;">
+        <audio controls>
+          <source src="wavs/comparison-extend/continuation/ap32-13.wav" type="audio/wav">
+        </audio>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<br>
+<h3>Celebrities</h3>
+<br>
+<div style="overflow-x: scroll;">
+  <!-- <table style="width:100%; border-collapse: collapse;"> -->
   <table style="width:100%; border-collapse: collapse;">
     <thead>
       <tr>
+        <th>Identity</th>
+        <th>Text</th>
+        <th>Prompt</th>
+        <th>CLaM-TTS</th>
+        <th>DiTTo-TTS</th>
+        <th>APTTS (4 steps)</th>
+        <th>w/o AP (32 steps)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">
+          Michael Caine
+        </td>
+        <td style="padding: 8px;">
+          And sometimes, in both realms, it's not just about shining the brightest, but enduring the longest.
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/comparison-extend/prompt/eng-caine.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/comparison-extend/baselines/clam-2.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/comparison-extend/baselines/ditto-2.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/comparison-extend/aptts/2_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/comparison-extend/ap32/2_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 8px;">
+          Robert Downey Jr.
+        </td>
+        <td style="padding: 8px;">
+          We have the responsibility to ensure power and technology are used for the greater good.
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/comparison-extend/prompt/eng-robert.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/comparison-extend/baselines/clam-3.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/comparison-extend/baselines/ditto-3.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/comparison-extend/aptts/3_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/comparison-extend/ap32/3_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+    </tbody>
+    <br>
+    <thead>
+      <tr>
+        <th style="width: 15%;">Identity</th>
         <th style="width: 25%;">Text</th>
         <th style="width: 15%;">Prompt</th>
-        <th style="width: 15%;">CLaM-TTS</th>
-        <th style="width: 15%;">DiTTo-TTS</th>
+        <th style="width: 15%;">HierSpeech++</th>
         <th style="width: 15%;">APTTS (4 steps)</th>
         <th style="width: 15%;">w/o AP (32 steps)</th>
       </tr>
     </thead>
     <tbody>
-      <!-- Sample 1 -->
-      <tr style="border-bottom: 1px solid #ddd;">
-        <td style="padding: 8px;">
-          We must unite and harness our strengths, for the fate of our world hangs in the balance.
-        </td>
-        <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/prompt/optimusprime_prompt.wav" type="audio/wav">
-          </audio>
-        </td>
-        <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/clam/optimusprime.wav" type="audio/wav">
-          </audio>
-        </td>
-        <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/ditto/optimusprime.wav" type="audio/wav">
-          </audio>
-        </td>
-        <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/aptts/optimusprime.wav" type="audio/wav">
-          </audio>
-        </td>
-        <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/ap32/optimusprime.wav" type="audio/wav">
-          </audio>
-        </td>
-      </tr>
-      
-      <!-- Sample 2 -->
-      <tr style="border-bottom: 1px solid #ddd;">
-        <td style="padding: 8px;">
-          But to those who knew her well, it was a symbol of her unwavering determination and spirit.
-        </td>
-        <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/prompt/rachel_prompt.wav" type="audio/wav">
-          </audio>
-        </td>
-        <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/clam/rachel.wav" type="audio/wav">
-          </audio>
-        </td>
-        <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/ditto/rachel.wav" type="audio/wav">
-          </audio>
-        </td>
-        <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/aptts/rachel.wav" type="audio/wav">
-          </audio>
-        </td>
-        <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/ap32/rachel.wav" type="audio/wav">
-          </audio>
-        </td>
-      </tr>
+        <tr>
+          <td style="padding: 8px; min-width: 150px;">
+            Steve Jobs
+          </td>
+          <td style="padding: 8px; min-width: 250px;">
+            In this work, we once again significantly improve the naturalness and speaker similarity of the synthetic speech, even in the zero-shot speech synthesis scenarios.
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/prompt/eng-stevejobs.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/baselines/hier-5.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/aptts/5_gen.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/ap32/5_gen.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
     </tbody>
   </table>
+</div>
+  <br>
+  <h3>Anime Characters</h3>
+  <br>
+  <div style="overflow-x: scroll;">
+    <table style="width:100%; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th>Identity</th>
+          <th>Text</th>
+          <th>Prompt</th>
+          <th>CLaM-TTS</th>
+          <th>DiTTo-TTS</th>
+          <th>Mega-TTS</th>
+          <th>APTTS (4 steps)</th>
+          <th>w/o AP (32 steps)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Sample 1 -->
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 8px; min-width: 150px;">
+            Sponge Bob
+          </td>
+          <td style="padding: 8px; min-width: 250px;">
+            Let's go drink until we can't feel feelings anymore.
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/prompt/spongebob_prompt.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/baselines/clam-6.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/baselines/ditto-6.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/baselines/mega-6.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/aptts/6_gen.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/ap32/6_gen.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+        
+        <!-- Sample 2 -->
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 8px;">
+            Peter Griffin
+          </td>
+          <td style="padding: 8px;">
+            Uh, it's not like the internet to go crazy about something small and stupid.
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/prompt/petergriffin_prompt.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/baselines/clam-7.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/baselines/ditto-7.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/baselines/mega-7.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/aptts/7_gen.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/ap32/7_gen.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+  
+        <!-- Sample 3 -->
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 8px;">
+            Rick
+          </td>
+          <td style="padding: 8px;">
+            Then I would never talk to that person about boa constrictors, or primeval forests, or stars. I would bring myself down to his level.
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/prompt/rick_prompt.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/baselines/clam-8.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/baselines/ditto-8.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/baselines/mega-8.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/aptts/8_gen.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/ap32/8_gen.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
 
-
+        <!-- Sample 4 -->
+        <tr>
+          <td style="padding: 8px;">
+            Morty
+          </td>
+          <td style="padding: 8px;">
+            In what a disgraceful light might it not strike so vain a man!
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/prompt/morty_prompt.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/baselines/clam-9.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/baselines/ditto-9.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/baselines/mega-9.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/aptts/9_gen.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td style="padding: 8px;">
+            <audio controls style="min-width: 150px;">
+              <source src="wavs/comparison-extend/ap32/9_gen.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 </section>
-
-
     
     <!-- Multi-speaker TTS Section -->
     <section id="multi-speaker">
