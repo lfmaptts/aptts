@@ -20,7 +20,7 @@
     }
     .container {
       width: 90%;
-      max-width: 960px;
+      max-width: 2000px;
       margin: auto;
       padding: 20px 0;
     }
@@ -85,8 +85,11 @@
         <li style="margin: 0 15px;">
           <a href="#zero-shot" style="color: #fff; text-decoration: none;">Zero-shot TTS (LibriSpeech test-clean)</a>
         </li>
-        <li style="margin: 0 15px;">
+        <!-- <li style="margin: 0 15px;">
           <a href="#zero-shot-comparison" style="color: #fff; text-decoration: none;">Zero-shot TTS (Comparison with other models)</a>
+        </li> -->
+        <li style="margin: 0 15px;">
+          <a href="#zero-shot-extension" style="color: #fff; text-decoration: none;">Zero-shot TTS (Extension of our work)</a>
         </li>
         <li style="margin: 0 15px;">
           <a href="#multi-speaker" style="color: #fff; text-decoration: none;">Multi-speaker TTS (VCTK)</a>
@@ -443,19 +446,33 @@
   </div>
 </div>
 </section>
-<section id="zero-shot-comparison">
-  <h2>Zero-shot TTS (Comparison with other models)</h2>
+
+
+<section id="zero-shot-extension">
+  <h2>Zero-shot TTS (Extension of our work)</h2>
+  <h3>Below is an extended version of our model. Key changes are below.</h3>
+  <ul>
+    <li><strong>Data scale-up:</strong> Public datasets — Korean 3.9k hours; English 6.5k hours.</li>
+    <li><strong>Model size:</strong> 0.33B parameters.</li>
+    <li><strong>Training pipeline:</strong> <a href="https://arxiv.org/abs/2503.04824" target="_blank" rel="noopener">ProReFlow</a> applied before adversarial post-training.</li>
+    <li><strong>CFG:</strong> For faster inference, we used standardCFG instead of DualCFG — similar to F5-TTS & VoicBox. HybridCFG strategy is maintained.</li>
+  </ul>  
 </br>
+
+<div style="overflow-x: scroll;">
 <div class="sample";>
+<h3>LibriTTS</h3>
+<br>
   <table style="width:100%; border-collapse: collapse;">
     <thead>
       <tr>
-        <th style="width: 25%;">Text</th>
-        <th style="width: 15%;">Prompt</th>
-        <th style="width: 15%;">E3-TTS</th>
-        <th style="width: 15%;">DiTTo-TTS</th>
-        <th style="width: 15%;">APTTS (4 steps)</th>
-        <th style="width: 15%;">w/o AP (32 steps)</th>
+        <th>Text</th>
+        <th>Prompt</th>
+        <th>E3-TTS</th>
+        <th>DiTTo-TTS</th>
+        <th>Ours w/o AP (32-step)</th>
+        <th>Ours w/o AP (4-step)</th>
+        <th>APTTS (4-step)</th>
       </tr>
     </thead>
     <tbody>
@@ -465,28 +482,33 @@
           She felt the force of the objections.
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/prompt/02_prompt.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/prompt/22.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/e3tts/02.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/e3tts-22.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/ditto/02.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/ditto-22.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/aptts/02.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base32/22_gen.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/ap32/02.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base4/22_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/ap4/22_gen.wav" type="audio/wav">
           </audio>
         </td>
       </tr>
@@ -497,28 +519,33 @@
           She can't get it out of her head, even after fifty years.
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/prompt/03_prompt.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/prompt/23.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/e3tts/03.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/e3tts-23.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/ditto/03.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/ditto-23.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/aptts/03.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base32/23_gen.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/ap32/03.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base4/23_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/ap4/23_gen.wav" type="audio/wav">
           </audio>
         </td>
       </tr>
@@ -529,28 +556,33 @@
           "I don't think so," replied Tom.
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/prompt/13_prompt.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/prompt/29.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/e3tts/13.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/e3tts-29.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/ditto/13.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/ditto-29.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/aptts/13.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base32/29_gen.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/ap32/13.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base4/29_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/ap4/29_gen.wav" type="audio/wav">
           </audio>
         </td>
       </tr>
@@ -561,209 +593,42 @@
           But at that moment the voice of the stranger was heard from the window.
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/prompt/17_prompt.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/prompt/31.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/e3tts/17.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/e3tts-31.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/ditto/17.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/ditto-31.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/aptts/17.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base32/31_gen.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
-          <audio controls>
-            <source src="wavs/comparison/ap32/17.wav" type="audio/wav">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base4/31_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/ap4/31_gen.wav" type="audio/wav">
           </audio>
         </td>
       </tr>
     </tbody>
   </table>
 </br>
-<h3>Celebrities: Optimus Prime & Rachel McAdams</h3>
-<br>
-<table style="width:100%; border-collapse: collapse;">
-  <thead>
-    <tr>
-      <th style="width: 25%;">Text</th>
-      <th style="width: 15%;">Prompt</th>
-      <th style="width: 15%;">CLaM-TTS</th>
-      <th style="width: 15%;">DiTTo-TTS</th>
-      <th style="width: 15%;">APTTS (4 steps)</th>
-      <th style="width: 15%;">w/o AP (32 steps)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Sample 1 -->
-    <tr style="border-bottom: 1px solid #ddd;">
-      <td style="padding: 8px;">
-        We must unite and harness our strengths, for the fate of our world hangs in the balance.
-      </td>
-      <td style="padding: 8px;">
-        <audio controls>
-          <source src="wavs/comparison/prompt/optimusprime_prompt.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px;">
-        <audio controls>
-          <source src="wavs/comparison/clam/optimusprime.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px;">
-        <audio controls>
-          <source src="wavs/comparison/ditto/optimusprime.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px;">
-        <audio controls>
-          <source src="wavs/comparison/aptts/optimusprime.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px;">
-        <audio controls>
-          <source src="wavs/comparison/ap32/optimusprime.wav" type="audio/wav">
-        </audio>
-      </td>
-    </tr>
-    
-    <!-- Sample 2 -->
-    <tr>
-      <td style="padding: 8px;">
-        But to those who knew her well, it was a symbol of her unwavering determination and spirit.
-      </td>
-      <td style="padding: 8px;">
-        <audio controls>
-          <source src="wavs/comparison/prompt/rachel_prompt.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px;">
-        <audio controls>
-          <source src="wavs/comparison/clam/rachel.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px;">
-        <audio controls>
-          <source src="wavs/comparison/ditto/rachel.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px;">
-        <audio controls>
-          <source src="wavs/comparison/aptts/rachel.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px;">
-        <audio controls>
-          <source src="wavs/comparison/ap32/rachel.wav" type="audio/wav">
-        </audio>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</br>
 
-<h4>Below is an extended version of the above model. It maintains the same architecture while incorporating additional public Korean datasets (2522 hours, 3424 speakers) into its training. Scroll ↔ to see entire samples.</h4>
-<div class="sample";>
-<div style="overflow-x: scroll;">
-<table style="width:100%; border-collapse: collapse;">
-  <thead>
-    <tr>
-      <th>Text</th>
-      <th>Prompt</th>
-      <th>GT</th>
-      <th>CLaM-TTS</th>
-      <th>DiTTo-TTS</th>
-      <th>APTTS (4 steps)</th>
-      <th>w/o AP (32 steps)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="border-bottom: 1px solid #ddd;">
-      <td style="padding: 8px; min-width: 250px;">
-        <font color="gray">angelica broke in in her energetic </font>way if you're going to be a duke i won't be left plain miss hamilton wells you couldn't be plain miss anything
-      </td>
-      <td style="padding: 8px; min-width: 150px;">
-        <audio controls>
-          <source src="wavs/comparison-extend/continuation/prompt-11.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px; min-width: 150px;">
-        <audio controls>
-          <source src="wavs/comparison-extend/continuation/gt-11.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px; min-width: 150px;">
-        <audio controls>
-          <source src="wavs/comparison-extend/continuation/clam-11.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px; min-width: 150px;">
-        <audio controls>
-          <source src="wavs/comparison-extend/continuation/ditto-11.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px; min-width: 150px;">
-        <audio controls>
-          <source src="wavs/comparison-extend/continuation/aptts-11.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px; min-width: 150px;">
-        <audio controls>
-          <source src="wavs/comparison-extend/continuation/ap32-11.wav" type="audio/wav">
-        </audio>
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; min-width: 250px;">
-        <font color="gray">실현할 기회를 얻지 못하다 미국</font>의 전기회사를 방문해 계획을 말했습니다.
-      </td>
-      <td style="padding: 8px; min-width: 150px;">
-        <audio controls>
-          <source src="wavs/comparison-extend/continuation/prompt-13.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px; min-width: 150px;">
-        <audio controls>
-          <source src="wavs/comparison-extend/continuation/gt-13.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px; min-width: 150px;">
-        <audio controls>
-          <source src="wavs/comparison-extend/continuation/clam-13.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px; min-width: 150px;">
-        <audio controls>
-          <source src="wavs/comparison-extend/continuation/ditto-13.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px; min-width: 150px;">
-        <audio controls>
-          <source src="wavs/comparison-extend/continuation/aptts-13.wav" type="audio/wav">
-        </audio>
-      </td>
-      <td style="padding: 8px; min-width: 150px;">
-        <audio controls>
-          <source src="wavs/comparison-extend/continuation/ap32-13.wav" type="audio/wav">
-        </audio>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<br>
 <h3>Celebrities</h3>
 <br>
-<div style="overflow-x: scroll;">
   <!-- <table style="width:100%; border-collapse: collapse;"> -->
   <table style="width:100%; border-collapse: collapse;">
     <thead>
@@ -773,11 +638,126 @@
         <th>Prompt</th>
         <th>CLaM-TTS</th>
         <th>DiTTo-TTS</th>
-        <th>APTTS (4 steps)</th>
-        <th>w/o AP (32 steps)</th>
+        <th>Ours w/o AP (32-step)</th>
+        <th>Ours w/o AP (4-step)</th>
+        <th>APTTS (4-step)</th>
       </tr>
     </thead>
     <tbody>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">
+          Mark Zuckerberg
+        </td>
+        <td style="padding: 8px;">
+          Our goal is to bridge communication gaps and preserve the richness of these unique languages.
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/prompt/39.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/clam-39.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/ditto-39.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base32/39_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base4/39_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/ap4/39_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">
+          Robert Downey Jr.
+        </td>
+        <td style="padding: 8px;">
+          We have the responsibility to ensure power and technology are used for the greater good.
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/prompt/38.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/clam-38.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/ditto-38.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base32/38_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base4/38_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/ap4/38_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">
+          Rachel McAdams
+        </td>
+        <td style="padding: 8px;">
+          But to those who knew her well, it was a symbol of her unwavering determination and spirit.
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/prompt/37.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/clam-37.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/ditto-37.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base32/37_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base4/37_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/ap4/37_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
       <tr style="border-bottom: 1px solid #ddd;">
         <td style="padding: 8px;">
           Michael Caine
@@ -787,66 +767,153 @@
         </td>
         <td style="padding: 8px;">
           <audio controls style="min-width: 150px;">
-            <source src="wavs/comparison-extend/prompt/eng-caine.wav" type="audio/wav">
+            <source src="wavs/zeroshot-extend/prompt/36.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
           <audio controls style="min-width: 150px;">
-            <source src="wavs/comparison-extend/baselines/clam-2.wav" type="audio/wav">
+            <source src="wavs/zeroshot-extend/baselines/clam-36.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
           <audio controls style="min-width: 150px;">
-            <source src="wavs/comparison-extend/baselines/ditto-2.wav" type="audio/wav">
+            <source src="wavs/zeroshot-extend/baselines/ditto-36.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
           <audio controls style="min-width: 150px;">
-            <source src="wavs/comparison-extend/aptts/2_gen.wav" type="audio/wav">
+            <source src="wavs/zeroshot-extend/base32/36_gen.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
           <audio controls style="min-width: 150px;">
-            <source src="wavs/comparison-extend/ap32/2_gen.wav" type="audio/wav">
+            <source src="wavs/zeroshot-extend/base4/36_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/ap4/36_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">
+          Jessie Eisenberg
+        </td>
+        <td style="padding: 8px;">
+          So here we are, trying to catch up, and hoping this day turns around soon.
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/prompt/35.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/clam-35.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/ditto-35.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base32/35_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base4/35_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/ap4/35_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">
+          Benedict Cumberbatch
+        </td>
+        <td style="padding: 8px;">
+          However, if you choose to stay, know that the truth I unveil may forever alter the course of your journey.
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/prompt/34.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/clam-34.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/baselines/ditto-34.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base32/34_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/base4/34_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/ap4/34_gen.wav" type="audio/wav">
           </audio>
         </td>
       </tr>
       <tr>
         <td style="padding: 8px;">
-          Robert Downey Jr.
+          Optimus Prime
         </td>
         <td style="padding: 8px;">
-          We have the responsibility to ensure power and technology are used for the greater good.
+          We must unite and harness our strengths, for the fate of our world hangs in the balance.
         </td>
         <td style="padding: 8px;">
           <audio controls style="min-width: 150px;">
-            <source src="wavs/comparison-extend/prompt/eng-robert.wav" type="audio/wav">
+            <source src="wavs/zeroshot-extend/prompt/33.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
           <audio controls style="min-width: 150px;">
-            <source src="wavs/comparison-extend/baselines/clam-3.wav" type="audio/wav">
+            <source src="wavs/zeroshot-extend/baselines/clam-33.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
           <audio controls style="min-width: 150px;">
-            <source src="wavs/comparison-extend/baselines/ditto-3.wav" type="audio/wav">
+            <source src="wavs/zeroshot-extend/baselines/ditto-33.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
           <audio controls style="min-width: 150px;">
-            <source src="wavs/comparison-extend/aptts/3_gen.wav" type="audio/wav">
+            <source src="wavs/zeroshot-extend/base32/33_gen.wav" type="audio/wav">
           </audio>
         </td>
         <td style="padding: 8px;">
           <audio controls style="min-width: 150px;">
-            <source src="wavs/comparison-extend/ap32/3_gen.wav" type="audio/wav">
+            <source src="wavs/zeroshot-extend/base4/33_gen.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td style="padding: 8px;">
+          <audio controls style="min-width: 150px;">
+            <source src="wavs/zeroshot-extend/ap4/33_gen.wav" type="audio/wav">
           </audio>
         </td>
       </tr>
     </tbody>
+    </table>
     <br>
-    <thead>
+    <!-- <thead>
       <tr>
         <th style="width: 15%;">Identity</th>
         <th style="width: 25%;">Text</th>
@@ -885,14 +952,11 @@
             </audio>
           </td>
         </tr>
-    </tbody>
-  </table>
-</div>
-  <br>
-  <h3>Anime Characters</h3>
-  <br>
-  <div style="overflow-x: scroll;">
-    <table style="width:100%; border-collapse: collapse;">
+    </tbody> -->
+  <!-- <br> -->
+  <!-- <h3>Anime Characters</h3> -->
+  <!-- <br> -->
+    <!-- <table style="width:100%; border-collapse: collapse;">
       <thead>
         <tr>
           <th>Identity</th>
@@ -906,7 +970,6 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Sample 1 -->
         <tr style="border-bottom: 1px solid #ddd;">
           <td style="padding: 8px; min-width: 150px;">
             Sponge Bob
@@ -945,8 +1008,6 @@
             </audio>
           </td>
         </tr>
-        
-        <!-- Sample 2 -->
         <tr style="border-bottom: 1px solid #ddd;">
           <td style="padding: 8px;">
             Peter Griffin
@@ -985,8 +1046,6 @@
             </audio>
           </td>
         </tr>
-  
-        <!-- Sample 3 -->
         <tr style="border-bottom: 1px solid #ddd;">
           <td style="padding: 8px;">
             Rick
@@ -1025,8 +1084,6 @@
             </audio>
           </td>
         </tr>
-
-        <!-- Sample 4 -->
         <tr>
           <td style="padding: 8px;">
             Morty
@@ -1066,7 +1123,7 @@
           </td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
   </div>
 </div>
 </section>
